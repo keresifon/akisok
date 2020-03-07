@@ -1,0 +1,71 @@
+*
+{
+  margin:0;
+  padding:0;
+}
+
+.header {
+    background:white;
+    //background-image:  url(../images/logo.jpg);
+    //background-attachment: fixed;
+    //background-repeat: no-repeat;
+    background-position: 1% 0%;
+    height: 50px;
+    padding-left: 250px;
+    width: 100%;
+    border-bottom:2px solid grey;
+    
+}
+.nav {
+    font-family: "PT Sans";
+    display: flex;
+    list-style: none;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  //z-index: 20;
+  
+  text-decoration: none;
+}
+.nav-item { 
+    color: #999999;
+   // font-size: .9rem;
+    text-decoration: none;
+    padding-left: 1.5rem;
+    line-height: 18px;
+    font-size: 13px;
+    list-style: none;
+     
+}
+.nav-item:hover{
+    color: #666666;
+    //display:none;
+    //position: 50px;
+    //right: 55%;
+    //min-width: 150px;
+    border-radius: 5px;
+    
+}
+.active-nav-item {
+     color:#ffffff
+}
+
+.nav-list-sub {
+  
+  list-style: none;
+  z-index: 20;
+
+}
+.nav-item-sub {
+  color: #999999;
+    font-size: -9rem;
+    //margin-left: 1.9rem;
+    text-decoration: none;
+    //padding-left: 1.5rem;
+    line-height: 18px;
+    font-size: 13px;
+    
+    display:none;
+
+}
