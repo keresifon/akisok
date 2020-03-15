@@ -1,0 +1,99 @@
+$font:'Droid Sans', Helvetica, Arial, Sans-Serif;
+$font-header:'Raleway', Helvetica, Arial, Sans-Serif;
+
+//Color
+
+$white:#fff;
+$black:#000;
+$hover-color:#E74C3C;
+
+html,
+body {
+  font-family: $font;
+  font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 0;
+    padding-right: 15px;
+    min-height: 100vh;
+   // background-color: grayscale($color: #000000);
+  
+  }
+
+  .header {
+    //background-position: 1% 0%;
+    height: 50px;
+    padding-left: 10px;
+    width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+   .inner-header {
+     font-family: $font-header;
+    font-size: 36px;
+    font-weight:700;
+    text-decoration: none;
+    
+    a {
+      text-decoration: none;
+      color: $black;
+      &:hover {
+        color:$hover-color
+      }
+    }
+    
+  }
+  .navigation {
+    //float: right;
+    padding: 7px 10px; 
+    margin-right: 10px;
+    margin-top: -25px;
+      nav {
+        
+          ul {
+              display:flex;
+              justify-content: flex-end;
+            
+              
+              
+              
+              li { 
+                  text-decoration: none;
+                  list-style: none;
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  //text-align: center;
+                  //padding: 7px 10px;
+                  
+                  
+                  a {
+                      text-decoration: none;
+                      color:$black;
+                      padding: 7px 10px;
+
+                      
+                      &:hover {
+                        background-color: $hover-color;
+                        color:$white;
+                         padding: 7px 10px;
+                         
+                      }
+                      &:active {
+                        background-color: $hover-color; 
+                      } 
+
+                  }
+                  
+                  
+              }
+          }
+      }
+  }
+}
+
+.top-grid{
+  display: grid;
+  grid-template-columns: 25% 30% 20% 25% ;
+  grid-template-rows: 50% 50% ;
+  background: $hover-color;
+}

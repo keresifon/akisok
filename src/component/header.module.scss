@@ -4,16 +4,17 @@
   padding:0;
 }
 
+container {
+
+}
 .header {
     background:white;
-    //background-image:  url(../images/logo.jpg);
-    //background-attachment: fixed;
-    //background-repeat: no-repeat;
+    
     background-position: 1% 0%;
     height: 50px;
     padding-left: 250px;
     width: 100%;
-    border-bottom:2px solid grey;
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     
 }
 .nav {
@@ -69,3 +70,4 @@
     display:none;
 
 }
+

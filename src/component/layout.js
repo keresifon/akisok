@@ -1,12 +1,15 @@
 import React from "react"
 import Header from "../component/header"
-import headerStyles from "./layout.module.scss"
+
+
+import styles from "../styles/style.module.scss"
 
 const Layout = (props) => {
     
   return (
-    <div>
+    <div className={styles.container}>
      <Header/>
+
 <div>
      {props.children}
      </div>
