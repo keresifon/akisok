@@ -1,0 +1,43 @@
+//flexbox
+
+.mid-container {
+  
+
+    ul {
+    margin-top: 20px;
+    padding: 0;
+      display: flex;
+      list-style: none;
+      
+    
+
+      li {
+        flex-grow: 1;
+        &:first-child {
+          background: sandybrown;
+          width: 50px;
+          padding: 10px;
+        }
+        &:nth-child(2){
+          
+          padding: 10px;
+          //flex-grow:2;
+        }
+        &:nth-child(3){
+          
+          padding: 10px;
+          //flex-grow:2;
+        }
+          &:nth-child(4){
+          
+          padding: 10px;
+         // flex-grow:2;
+        }
+        &:last-child {
+          background: seagreen;
+          padding: 10px;
+        }
+      }
+    }
+    
+  }

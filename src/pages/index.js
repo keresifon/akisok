@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../component/layout"
 import Top from "../component/top"
+import Mid from "../component/mid"
 
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
     <div>
      <Layout>
       <Top />
+      <Mid />
 
      </Layout>
 
