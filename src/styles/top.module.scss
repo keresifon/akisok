@@ -4,7 +4,7 @@
   
 
     ul {
-margin-top: 20px;
+  margin-top: 20px;
     padding: 0;
       display: flex;
       list-style: none;
@@ -14,23 +14,53 @@ margin-top: 20px;
       li {
         flex-grow: 1;
         &:first-child {
-          background: sandybrown;
-          width: 50px;
+          //background: sandybrown;
+          width: auto;
           padding: 10px;
         }
         &:nth-child(2){
-          background: silver;
+          //background: silver;
           flex-grow:2;
+          max-width: 690;
           padding: 10px;
         }
         &:nth-child(3){
-          background: beige;
-          padding: 10px;
-          //flex-grow:2;
+          max-width: 345;
+          padding: 0 10px;
+          flex-grow:0;
         }
        
         &:last-child {
-          background: seagreen;
+         // background: seagreen;
+          padding: 10px;
+          width:auto;
+        }
+      }
+    }
+    
+  }
+
+  .embedd-container {
+  
+
+    ul {
+  //margin-top: 20px;
+    padding: 0;
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      
+    
+
+      li {
+        &:first-child {
+          
+          max-width: 345;
+          padding: 10px;
+        }
+       
+        &:last-child {
+          max-width: 345;
           padding: 10px;
         }
       }

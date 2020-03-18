@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../styles/mid.module.scss"
 import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
+//import Img from "gatsby-image"
 
 const Mid = () => {
   const data = useStaticQuery(graphql`
@@ -13,11 +14,13 @@ const Mid = () => {
             title
             date(formatString: "YYYY-MM-DD")
             category
+            excerpt
             featuredImage {
-          fluid {
-            srcSetWebp
-          }
-        }
+              title
+              fluid (maxWidth: 345, maxHeight:205){
+                ...GatsbyContentfulFluid
+              }
+            }
           }
         }
       }
@@ -25,16 +28,18 @@ const Mid = () => {
   `)
   return (
     <div className={styles.midContainer}>
-        
       <ul>
         <li>1</li>
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
             <li className={hstyles.section}>
+              
               <Link to={`/${edge.node.slug}`}>
-                <h2 >{edge.node.title}</h2>
+                <img src={edge.node.featuredImage.fluid.src} alt={edge.node.featuredImage.title}/>
+                <h2>{edge.node.title}</h2>
               </Link>
               <p>{edge.node.date}</p>
+              <p>{edge.node.excerpt}</p>
             </li>
           )
         })}

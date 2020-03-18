@@ -1,23 +1,23 @@
 import React from "react"
-import { Link , graphql, useStaticQuery } from "gatsby"
+import { Link /** , graphql, useStaticQuery*/ } from "gatsby"
 
 import styles from "../styles/style.module.scss"
 
 const Header = () => {
-    const data = useStaticQuery(graphql`
-    query { 
-        site {
-        siteMetadata {
-          title
-        }
-      }
+   // const data = useStaticQuery(graphql`
+    //query { 
+    //    site {
+    //    siteMetadata {
+    //      title
+    //    }
+    //  }
                   
-                }
-  `)
+      //          }
+  //`)
   return (
     <div className={styles.header}>
       <div className={styles.innerHeader}>
-        <div classname={styles.logo}>
+        <div className={styles.logo}>
         <Link to="/">akisok! </Link>
         </div>
       </div>
