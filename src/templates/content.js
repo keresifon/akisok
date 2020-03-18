@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../component/layout"
 import {graphql} from "gatsby"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import Img from "gatsby-image"
+//import Img from "gatsby-image"
 
 
 

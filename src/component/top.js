@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "../styles/top.module.scss"
-import hstyles from "../styles/style.module.scss"
+//import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 const Top = () => {
@@ -8,7 +8,7 @@ const Top = () => {
     query {
       allContentfulABlogPost(
         filter: { category: { eq: "History" } }
-        sort: { fields: date, order: DESC }
+        sort: { fields: date, order: ASC }
         limit: 3
       ) {
         edges {
@@ -36,16 +36,19 @@ const Top = () => {
         <li>2</li>
         <li>
           <div className={styles.embeddContainer}>
-            <ul className={styles.embeddContainer}>
+            <ul >
               {data.allContentfulABlogPost.edges.map(edge => {
                 return (
-                  <li className={hstyles.section}>
-                    <Link to={`/${edge.node.slug}`}>
+                  <li className={styles.overlay}>
+                    
+                    <Link  className={styles.overlay} to={`/${edge.node.slug}`}>
+                    
                       <img
                         src={edge.node.featuredImage.fluid.src}
                         alt={edge.node.featuredImage.title}
                       />
-                      <h2>{edge.node.title}</h2>
+                      <h2 >{edge.node.title}</h2>
+                      <p>{edge.node.date}</p>
                     </Link>
                     
                   </li>
