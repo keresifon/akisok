@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../styles/top.module.scss"
 //import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
+//import
 
 const Top = () => {
   const data = useStaticQuery(graphql`
@@ -9,7 +10,7 @@ const Top = () => {
       allContentfulABlogPost(
         filter: { category: { eq: "History" } }
         sort: { fields: date, order: ASC }
-        limit: 3
+        limit: 2
       ) {
         edges {
           node {
@@ -42,13 +43,13 @@ const Top = () => {
                   <li className={styles.overlay}>
                     
                     <Link  className={styles.overlay} to={`/${edge.node.slug}`}>
-                    
                       <img
                         src={edge.node.featuredImage.fluid.src}
                         alt={edge.node.featuredImage.title}
                       />
                       <h2 >{edge.node.title}</h2>
                       <p>{edge.node.date}</p>
+                      <h3>{edge.node.category}</h3>
                     </Link>
                     
                   </li>
@@ -62,5 +63,6 @@ const Top = () => {
     </div>
   )
 }
+
 
 export default Top

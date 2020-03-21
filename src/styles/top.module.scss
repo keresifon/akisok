@@ -8,6 +8,7 @@ $white:#fff;
 $black:#000;
 $hover-color:#E74C3C;
 
+
 //flexbox
 
 .top-container {
@@ -106,7 +107,17 @@ $hover-color:#E74C3C;
             color: $white;
             
           }
-          
+          h3 {
+            position: absolute; 
+            bottom: 340px; 
+            left: 15px; 
+            //width: 50%; 
+            padding: 3px;
+            color: $white;
+            background-color: $hover-color;
+            
+
+          }
         }
        
         &:last-child {
@@ -117,18 +128,32 @@ $hover-color:#E74C3C;
             bottom: 15px; 
             left: 15px; 
             width: 100%; 
+           
             color: $white;
             font-size: 14px;
+           
+            
 
          }
          p {
           position: absolute; 
           bottom: 40px; 
           left: 15px; 
-          width: 100%; 
+          
+          
           color: $white;
+          
         }
-        
+        h3 {
+          position: absolute; 
+          bottom: 140px; 
+          left: 15px; 
+          //width: 100%; 
+          padding: 3px;
+          color: $white;
+          background-color: $hover-color;
+
+        }
         }
       }
     }
