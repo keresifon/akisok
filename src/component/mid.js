@@ -2,6 +2,8 @@ import React from "react"
 import styles from "../styles/mid.module.scss"
 import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import '../utils/fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 //import Img from "gatsby-image"
 
 const Mid = () => {
@@ -40,6 +42,15 @@ const Mid = () => {
               </Link>
               <p>{edge.node.date}</p>
               <p>{edge.node.excerpt}</p>
+              <h3>
+              <FontAwesomeIcon
+                         icon={"folder-open"}
+                          style={{ color: "#ffffff" }}
+                        />{" "}{edge.node.category}
+                        </h3>
+              <Link to={`/${edge.node.slug}`} >
+                <h4 >Read More &#8594;</h4>
+                </Link>
             </li>
           )
         })}

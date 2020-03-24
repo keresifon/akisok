@@ -25,12 +25,12 @@ $hover-color:#E74C3C;
       li {
         flex-grow: 1;
         &:first-child {
-          //background: sandybrown;
+          
           width: auto;
           padding: 10px;
         }
         &:nth-child(2){
-          //background: silver;
+          
           flex-grow:2;
           max-width: 690;
           padding: 10px;
@@ -42,7 +42,7 @@ $hover-color:#E74C3C;
         }
        
         &:last-child {
-         // background: seagreen;
+         
           padding: 10px;
           width:auto;
         }
@@ -69,15 +69,14 @@ $hover-color:#E74C3C;
       li {
       
         .overlay {
-          //position: absolute;
+          
           height: 50%;
           width: 100%;
           top: 50px;
           left: 0;
           background-color: rgba(180, 81, 64, 0.85);
           opacity:0.5;
-          //visibility: hidden;
-         // transition: all .5s ease;
+         
           transform: translateY(-50%);
           
         }
@@ -108,7 +107,7 @@ $hover-color:#E74C3C;
             position: absolute; 
             bottom: 340px; 
             left: 15px; 
-            //width: 50%; 
+            width: 30%; 
             padding: 3px;
             color: $white;
             background-color: $hover-color;
@@ -147,7 +146,7 @@ $hover-color:#E74C3C;
           position: absolute; 
           bottom: 140px; 
           left: 15px; 
-          //width: 100%; 
+          width: 30%; 
           padding: 3px;
           color: $white;
           background-color: $hover-color;

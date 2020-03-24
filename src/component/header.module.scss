@@ -25,13 +25,13 @@ container {
 .nav-list {
   display: flex;
   list-style: none;
-  //z-index: 20;
+  
   
   text-decoration: none;
 }
 .nav-item { 
     color: #999999;
-   // font-size: .9rem;
+   
     text-decoration: none;
     padding-left: 1.5rem;
     line-height: 18px;
@@ -41,10 +41,7 @@ container {
 }
 .nav-item:hover{
     color: #666666;
-    //display:none;
-    //position: 50px;
-    //right: 55%;
-    //min-width: 150px;
+    
     border-radius: 5px;
     
 }
@@ -61,9 +58,9 @@ container {
 .nav-item-sub {
   color: #999999;
     font-size: -9rem;
-    //margin-left: 1.9rem;
+    
     text-decoration: none;
-    //padding-left: 1.5rem;
+   
     line-height: 18px;
     font-size: 13px;
     
