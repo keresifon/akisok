@@ -4,6 +4,7 @@ import styles from "../styles/top.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Slide from "../component/slider"
 
 const Top = () => {
   const data = useStaticQuery(graphql`
@@ -34,8 +35,12 @@ const Top = () => {
   return (
     <div className={styles.topContainer}>
       <ul>
-        <li>1</li>
-        <li>2</li>
+        <li></li>
+        <li><Slide />
+        <h3>
+                        
+                        Pictures &#8594;
+                      </h3></li>
         <li>
           <div className={styles.embeddContainer}>
             <ul>
@@ -67,7 +72,7 @@ const Top = () => {
             </ul>
           </div>
         </li>
-        <li>4</li>
+        <li></li>
       </ul>
     </div>
   )

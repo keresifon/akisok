@@ -31,7 +31,7 @@ const Mid = () => {
   return (
     <div className={styles.midContainer}>
       <ul>
-        <li>1</li>
+        <li></li>
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
             <li className={hstyles.section}>
@@ -54,7 +54,7 @@ const Mid = () => {
             </li>
           )
         })}
-        <li>5</li>
+        <li></li>
       </ul>
     </div>
   )
