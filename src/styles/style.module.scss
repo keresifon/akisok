@@ -27,7 +27,8 @@ body {
     height: 50px;
     padding-left: 10px;
     width: 100%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border: 0px solid;
+    box-shadow: 0 0 4px  rgba(0, 0, 0, 0.1);
    .inner-header {
      font-family: $font-header;
     font-size: 36px;
