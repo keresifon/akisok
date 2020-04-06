@@ -1,11 +1,11 @@
-$font:'Droid Sans', Helvetica, Arial, Sans-Serif;
-$font-header:'Raleway', Helvetica, Arial, Sans-Serif;
+$font: "Droid Sans", Helvetica, Arial, Sans-Serif;
+$font-header: "Raleway" , Helvetica, Arial, Sans-Serif;
 
 //Color
 
-$white:#fff;
-$black:#000;
-$hover-color:#E74C3C;
+$white: #fff;
+$black: #000;
+$hover-color: #e74c3c;
 
 html,
 body {
@@ -14,99 +14,83 @@ body {
 }
 
 .container {
-    width: 100%;
-    //margin: 0 0;
-    padding-right: 0px;
-    min-height: 100vh;
-   
-   
-  }
-
-  .header {
-   
-    height: 50px;
-    padding-left: 10px;
-    width: 100%;
-    border: 0px solid;
-    box-shadow: 0 0 4px  rgba(0, 0, 0, 0.1);
-   .inner-header {
-     font-family: $font-header;
+  width: 100%;
+  //margin: 0 0;
+  padding-right: 0px;
+  min-height: 100vh;
+}
+.h1 h2 h3 h4 {
+  font-family: $font-header;
+}
+.header {
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+  border: 0px solid;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  .inner-header {
+    font-family: $font-header;
     font-size: 36px;
-    font-weight:700;
+    font-weight: 700;
     text-decoration: none;
-    
+
     a {
       text-decoration: none;
       color: $black;
       &:hover {
-        color:$hover-color
+        color: $hover-color;
       }
     }
-    
   }
   .navigation {
     //float: right;
-    padding: 7px 10px; 
+    padding: 7px 10px;
     margin-right: 10px;
     margin-top: -35px;
-      nav {
-        
-          ul {
-              display:flex;
-              justify-content: flex-end;
-            
-              
-              
-              
-              li { 
-                  text-decoration: none;
-                  list-style: none;
-                  text-transform: uppercase;
-                  font-weight: 700;
-                  
-                  
-                  
-                  a {
-                      text-decoration: none;
-                      color:$black;
-                      padding: 7px 10px;
+    nav {
+      ul {
+        display: flex;
+        justify-content: flex-end;
 
-                      
-                      &:hover {
-                        background-color: $hover-color;
-                        color:$white;
-                         padding: 7px 10px;
-                         
-                      }
-                      &:active {
-                        background-color: $hover-color; 
-                        
-                      } 
-                      
+        li {
+          text-decoration: none;
+          list-style: none;
+          text-transform: uppercase;
+          font-weight: 700;
 
-                  }
-                  
-                  
-              }
+          a {
+            text-decoration: none;
+            color: $black;
+            padding: 7px 10px;
+
+            &:hover {
+              background-color: $hover-color;
+              color: $white;
+              padding: 7px 10px;
+            }
+            &:active {
+              background-color: $hover-color;
+            }
           }
+        }
       }
+    }
   }
 }
 
 .section {
   font-family: $font-header;
-   color:$black; 
-    text-decoration: none;
-    
-    a {
-      list-style: none;
-      text-decoration: none;
-      color: $black;
-      &:hover {
-        color:$hover-color
-      }
+  color: $black;
+  text-decoration: none;
 
-}
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: $hover-color;
+    }
+  }
 }
 
 .footer {

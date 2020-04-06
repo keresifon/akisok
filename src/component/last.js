@@ -1,15 +1,15 @@
 import React from "react"
-import styles from "../styles/mid.module.scss"
+import styles from "../styles/last.module.scss"
 import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 //import Img from "gatsby-image"
 
-const Mid = () => {
+const Last = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulABlogPost(sort: { fields: date, order: DESC }, limit: 3, filter: { category :{eq :"Opinion"} }) {
+      allContentfulABlogPost(sort: { fields: date, order: DESC }, limit: 3, filter: { category :{eq :"Technology"} }) {
         edges {
           node {
             slug
@@ -60,4 +60,4 @@ const Mid = () => {
   )
 }
 
-export default Mid
+export default Last
