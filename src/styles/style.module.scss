@@ -100,3 +100,20 @@ body {
   width: 100%;
   padding: 10px;
 }
+
+.sidebar {
+ul {
+  li {
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 10px;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+
+     a {
+      
+      text-decoration: none;
+     }
+}
+}
+}

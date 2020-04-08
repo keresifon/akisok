@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import cStyles from "../styles/content.module.scss"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import SideBar from "./sidebar"
 //import Img from "gatsby-image"
 
 
@@ -48,13 +49,13 @@ const Content = (props) => {
             <h1>{props.data.contentfulABlogPost.title}</h1>
             <p>{props.data.contentfulABlogPost.date}&nbsp;&nbsp;<FontAwesomeIcon
                          icon={"folder-open"}
-                          style={{ color: "#000" }}
+                          style={{ color: "#e74c3c" }}
                         />{" "}{props.data.contentfulABlogPost.category}</p>
             {documentToReactComponents(props.data.contentfulABlogPost.body.json, options)}
           
             </div>  
             <div className={cStyles.sidebar}>
-              Side
+            <SideBar />
             </div>
             </div>
         </Layout>
