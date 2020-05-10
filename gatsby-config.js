@@ -36,12 +36,19 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          `Droid Sans`,
-          `Helvetica`, // you can also specify font weights and styles
-          `Raleway`,
+          {
+            family: `Droid Sans`,
+          },
+          {
+            family: `Raleway`,
+          },
+          {
+            family: `Helvetica`,
+            variants: [`400`, `700`],
+          },
         ],
       },
     },
