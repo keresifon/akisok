@@ -23,11 +23,8 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
       },
-     
     },
-    
-     
-   
+
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -37,25 +34,16 @@ module.exports = {
         downloadLocal: true,
       },
     },
-    
+
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: 'Droid San',
-            
-          },
-          {
-            family: 'Helvetica',
-            
-          },
-          {
-            family: 'Raleway',
-            
-          }
-        ]
-      }
+          `Droid Sans`,
+          `Helvetica`, // you can also specify font weights and styles
+          `Raleway`,
+        ],
+      },
     },
-  ]
+  ],
 }
