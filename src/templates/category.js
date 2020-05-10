@@ -3,7 +3,7 @@ import catStyles from "../styles/cat.module.scss"
 import Layout from "../component/layout"
 import { Link, graphql } from "gatsby"
 import '../utils/fontawesome'
-import {Location} from '@reach/router'
+
 
 
 

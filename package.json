@@ -20,7 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "env-cmd": "^10.1.0",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.21.21",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.23",
@@ -31,13 +31,14 @@
     "gatsby-transformer-remark": "^2.6.59",
     "gatsby-transformer-sharp": "^2.3.19",
     "grommet": "^2.11.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "nuka-carousel": "^4.6.6",
     "react": "^16.12.0",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
