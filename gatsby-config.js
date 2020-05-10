@@ -37,5 +37,25 @@ module.exports = {
         downloadLocal: true,
       },
     },
+
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Droid Sans`,
+            
+          },
+          {
+            family: `Raleway`,
+            
+          },
+          {
+            family: `Helvetica`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    },
   ]
 }

@@ -1,0 +1,98 @@
+@import 'style.module.scss';
+//flexbox
+
+.wrapper {
+  display:grid;
+  grid-template-columns: 50% 50%;
+  
+  
+
+  .leftcontent {
+    
+    padding: 20px;
+    margin-top: 20px;
+    //width: 725px;
+    justify-self: end;
+    
+    
+    li {
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+    flex-direction: row;
+    }
+    //background: honeydew;
+    
+    h1 {
+      font-weight: 100%;
+    
+    }
+ 
+    
+   
+    
+    
+  }
+  .rightcontent {
+    padding: 20px;
+    margin-top: 20px;
+    //width: 725px;
+    list-style: none;
+    justify-self: start;
+    padding: 20px;
+   // background: grey;
+   li {
+    text-decoration: none;
+    list-style: none;
+    }
+    
+  }
+    
+  }
+  
+  .catgrid {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(auto, auto);
+    grid-gap:10px;
+    grid-template-areas: 
+    "catimage title"
+    ;
+
+
+
+
+  .catimage { grid-area: catimage;
+  
+justify-self: right;
+padding: 10px;
+
+
+}
+  .title {grid-area: title;
+  justify-self: left;
+  
+    .mtitle {
+    text-decoration: none;
+    color: $black;
+    font-weight: bold;
+    &:hover {
+      color: $hover-color;
+    }
+    
+
+  }
+     .date {
+       text-decoration: none;
+     }
+}
+  //.date {grid-area:date;}
+  //.excerpt {grid-area: excerpt;}
+
+
+  .img {
+    height: 150px;
+    width: 250px;
+}
+
+}

@@ -46,7 +46,7 @@ const Mid = () => {
               <FontAwesomeIcon
                          icon={"folder-open"}
                           style={{ color: "#ffffff" }}
-                        />{" "}{edge.node.category}
+                        />{" "}<Link to={`/category/${edge.node.category}`}>{edge.node.category}</Link>
                         </h3>
               <Link to={`/${edge.node.slug}`} >
                 <h4 >Read More &#8594;</h4>
