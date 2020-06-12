@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
-import styles from "../styles/style.module.scss"
+
 //import  "../styles/main.scss"
 
 const Header = () => {

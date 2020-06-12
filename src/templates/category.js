@@ -62,9 +62,9 @@ const Category = (props , {pageContext}) => {
 export default Category
 
 export const query = graphql`
-    query  ($cat: String!) {
+    query  ($category: String!) {
       allContentfulABlogPost(
-        filter: { category: { eq: $cat } }
+        filter: { category: { eq: $category } }
         sort: { fields: date, order: DESC }) 
       { group(field:category)
 
