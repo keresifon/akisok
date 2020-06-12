@@ -45,7 +45,7 @@ const Top = () => {
           <Col className="">
             {data.allContentfulABlogPost.edges.map(edge => {
               return (
-                <Card className=" text-black my-2">
+                <Card className=" text-black my-2" key={edge.node.id}>
                   <Card.Img
                     src={edge.node.featuredImage.fluid.src}
                     alt={edge.node.featuredImage.title}
@@ -61,9 +61,7 @@ const Top = () => {
                       </Link>
                     </Card.Title>
                     <Card.Text>
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
+                    
                     <FontAwesomeIcon icon={"calendar"} />
                       {edge.node.date}
                    

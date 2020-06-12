@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {Card, CardDeck, Container, Row, Col} from "react-bootstrap"
+
 //import Img from "gatsby-image"
 
 const Last = () => {
@@ -40,16 +41,19 @@ const Last = () => {
       <Row>
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
- <Col>
+ <Col md={8} key={edge.node.id}>
   <CardDeck>
   <Card>
     <Card.Img variant="top" src={edge.node.featuredImage.fluid.src} />
     <Card.Body>
       <Card.Title><Link to={`/${edge.node.slug}`}>{edge.node.title}</Link></Card.Title>
       <Card.Text>
-      {edge.node.excerpt}
+      {edge.node.excerpt} 
+      </Card.Text>
+      <Card.Text>
       <Link to={`/${edge.node.slug}`} >
-                <h4 >Read More &#8594;</h4>
+                Read More &#8594;
+                <br/><br/>
                 </Link><FontAwesomeIcon
                   icon={"folder-open"}
                   style={{ color: "#e74c3c" }}
