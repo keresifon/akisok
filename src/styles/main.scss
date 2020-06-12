@@ -1,0 +1,10 @@
+@import "./node_modules/bootstrap-scss/bootstrap.scss";
+
+.navigation-clean.navbar-light ,
+.navbar-nav .nav-link.active, .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus, .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover {
+    color: rgb(14, 13, 13);
+    box-shadow: none;
+    background: none;
+    pointer-events: none;
+  }
+  

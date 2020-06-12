@@ -17,20 +17,20 @@ const Category = (props , {pageContext}) => {
     <Layout >
       
      <div> 
-   <h1>Title-{pageContext}</h1>
+   <h1>{props.pageContext.category}</h1>
     <>
     
     {props.data.allContentfulABlogPost.edges.map(edge => {
       return (
         
-        <div  className={catStyles.catgrid} >
-          <div className={catStyles.catimage}>
+        <div  className={catStyles.catgrid} key={edge.node.id}  >
+          <div className={catStyles.catimage} > 
         <Link  to={`/${edge.node.slug}`}>
             <img className={catStyles.img} src={edge.node.featuredImage.fluid.src} alt={edge.node.featuredImage.title}
             /> </Link>
             </div>
             <div className={catStyles.title}>
-            <Link  className={catStyles.mtitle} to={`/${edge.node.slug}`}><h2 >{edge.node.title} </h2></Link>
+            <Link   className={catStyles.mtitle} to={`/${edge.node.slug}`}><h2 >{edge.node.title} </h2></Link>
             <p className={catStyles.date}>{edge.node.date}</p>
             <p >{edge.node.excerpt}</p>
             
@@ -71,6 +71,7 @@ export const query = graphql`
      }
        edges {
           node {
+            id
             slug
             title
             date(formatString: "YYYY-MM-DD")

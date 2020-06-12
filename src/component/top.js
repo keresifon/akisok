@@ -5,6 +5,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Slide from "../component/slider"
+import { Card, Container, Row, Col } from 'react-bootstrap';
 
 const Top = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +17,7 @@ const Top = () => {
       ) {
         edges {
           node {
+            id
             slug
             title
             date(formatString: "YYYY-MM-DD")
@@ -33,48 +35,45 @@ const Top = () => {
   `)
 
   return (
-    <div className={styles.topContainer}>
-      <ul>
-        <li></li>
-        <li><Slide />
-        <h3>
-                        
-                        Pictures &#8594;
-                      </h3></li>
-        <li>
-          <div className={styles.embeddContainer}>
-            <ul>
+    <>
+    <div>
+    &nbsp;
+    </div>
+    
+    <Container>  
+      <Row>
+        <Col md={8}>
+      <Slide />
+        
+        </Col>
+        <Col >
+        
               {data.allContentfulABlogPost.edges.map(edge => {
                 return (
-                  <li className={styles.overlay} >
-                    <Link  to={`/${edge.node.slug}`}>
-                      <img 
-                        src={edge.node.featuredImage.fluid.src}
-                        alt={edge.node.featuredImage.title}
-                      />
-                      <h2>{edge.node.title}</h2>
-                      <p> 
-                        <FontAwesomeIcon
-                          icon={"calendar"}
-                          
-                        />{" "}{edge.node.date}</p>
-                      <h3>
-                        <FontAwesomeIcon
-                          icon={"folder-open"}
-                          style={{ color: "#ffffff" }}
-                        />{" "}
-                        {edge.node.category}
-                      </h3>
-                    </Link>
-                  </li>
+                  <Card className="bg-dark text-black">
+  <Card.Img src={edge.node.featuredImage.fluid.src} alt={edge.node.featuredImage.title} />
+  <Card.ImgOverlay>
+    <Card.Title><Link  to={`/${edge.node.slug}`}>{edge.node.title}</Link></Card.Title>
+    <Card.Text>
+      
+    </Card.Text>
+    <Card.Text>{edge.node.date}</Card.Text>
+  </Card.ImgOverlay>
+</Card>
+
+                  
+                  
                 )
               })}
-            </ul>
-          </div>
-        </li>
-        <li></li>
-      </ul>
+            
+        </Col>
+        
+      </Row>
+      </Container>
+      <div>
+    &nbsp;
     </div>
+    </>
   )
 }
 

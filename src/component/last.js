@@ -4,6 +4,7 @@ import hstyles from "../styles/style.module.scss"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {Card, CardDeck, Container, Row, Col} from "react-bootstrap"
 //import Img from "gatsby-image"
 
 const Last = () => {
@@ -12,6 +13,7 @@ const Last = () => {
       allContentfulABlogPost(sort: { fields: date, order: DESC }, limit: 3, filter: { category :{eq :"Technology"} }) {
         edges {
           node {
+            id
             slug
             title
             date(formatString: "YYYY-MM-DD")
@@ -29,34 +31,47 @@ const Last = () => {
     }
   `)
   return (
-    <div className={styles.midContainer}>
-      <ul>
-        <li></li>
+    <>
+    <div>
+    &nbsp;
+    </div>
+    <div >
+      
+    <Container>  
+      <Row>
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
-            <li className={hstyles.section}>
-              
-              <Link to={`/${edge.node.slug}`}>
-                <img src={edge.node.featuredImage.fluid.src} alt={edge.node.featuredImage.title}/>
-                <h2>{edge.node.title}</h2>
-              </Link>
-              <p>{edge.node.date}</p>
-              <p>{edge.node.excerpt}</p>
-              <h3>
-              <FontAwesomeIcon
-                         icon={"folder-open"}
-                          style={{ color: "#ffffff" }}
-                        />{" "}{edge.node.category}
-                        </h3>
-              <Link to={`/${edge.node.slug}`} >
+ <Col>
+  <CardDeck>
+  <Card>
+    <Card.Img variant="top" src={edge.node.featuredImage.fluid.src} />
+    <Card.Body>
+      <Card.Title><Link to={`/${edge.node.slug}`}>{edge.node.title}</Link></Card.Title>
+      <Card.Text>
+      {edge.node.excerpt}
+      <Link to={`/${edge.node.slug}`} >
                 <h4 >Read More &#8594;</h4>
                 </Link>
-            </li>
+      <Link to={`/category/${edge.node.category}`}>{edge.node.category}</Link>
+      </Card.Text>
+    </Card.Body>
+    <Card.Footer>
+      <small className="text-muted">{edge.node.date}</small>
+    </Card.Footer>
+  </Card>
+  
+</CardDeck>
+</Col>
+            
           )
+          
         })}
-        <li></li>
-      </ul>
+        </Row>
+        </Container>
+     
     </div>
+    
+    </>
   )
 }
 
