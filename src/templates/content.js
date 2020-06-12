@@ -37,7 +37,7 @@ const Content = props => {
   }
   return (
     <Layout>
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col md={8}>
             <div>&nbsp;</div>

@@ -1,9 +1,10 @@
 import React  from "react"
-import catStyles from "../styles/cat.module.scss"
+
 import Layout from "../component/layout"
 import { Link, graphql } from "gatsby"
 import '../utils/fontawesome'
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Card , CardDeck} from "react-bootstrap"
+
 
 
 
@@ -18,30 +19,42 @@ const Category = (props , {pageContext}) => {
        <>
      <div> 
      <div>&nbsp;</div>
-       <div className="container  "><h1>{props.pageContext.category}</h1></div>
+       
+       <Container className="py-5">
+          <Row>
+            <Col><div ><h1>{props.pageContext.category}</h1></div></Col>
+            </Row>
+            </Container>
    
-   
-    
+       <Container>
+          <Row>
     {props.data.allContentfulABlogPost.edges.map(edge => {
       return (
         
-        <Container>
-          <Row>
-            <Col md={3}><div><Link  to={`/${edge.node.slug}`}>
-            <img  src={edge.node.featuredImage.fluid.src} alt={edge.node.featuredImage.title}
-            /> </Link>
-            </div>
-            <div>&nbsp;</div>
-            </Col>
-            <Col>
-            <div className={catStyles.title}>
-            <Link   className={catStyles.mtitle} to={`/${edge.node.slug}`}><h2 >{edge.node.title} </h2></Link>
-            <p className={catStyles.date}>{edge.node.date}</p>
-            <p >{edge.node.excerpt}</p>
-            
-            </div></Col>
-          </Row>
-        </Container>
+        
+          <Col md={4} key={edge.node.id}>
+                  <CardDeck className=" h-100">
+                    <Card className=" mb-4" >
+                      <Card.Img
+                        variant="top"
+                        src={edge.node.featuredImage.fluid.src}
+                      />
+                      <Card.Body>
+                        <Card.Title>
+                          <Link to={`/${edge.node.slug}`}>
+                            {edge.node.title}
+                          </Link>
+                        </Card.Title>
+                        <Card.Text>{edge.node.excerpt}</Card.Text>
+                        
+                      </Card.Body>
+                      <Card.Footer>
+                        <small className="text-muted">{edge.node.date}</small>
+                      </Card.Footer>
+                    </Card>
+                  </CardDeck>
+                </Col>
+          
         
       
           
@@ -49,7 +62,8 @@ const Category = (props , {pageContext}) => {
       )
     })}
  
-
+ </Row>
+        </Container>
 
 
 

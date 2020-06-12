@@ -37,12 +37,12 @@ const Top = () => {
     <>
       <div>&nbsp;</div>
 
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col md={8}>
             <Slide />
           </Col>
-          <Col className="">
+          <Col >
             {data.allContentfulABlogPost.edges.map(edge => {
               return (
                 <Card className=" text-black my-2" key={edge.node.id}>
