@@ -36,37 +36,7 @@ const Header = () => {
         </Navbar.Collapse>
       </Navbar>
 
-      <div className={styles.header}>
-        <div className={styles.innerHeader}>
-          <div className={styles.logo}>
-            <Link to="/">akisok! </Link>
-          </div>
-        </div>
-        <div className={styles.navigation}>
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/">The Blog</Link>
-              </li>
-              <li>
-                <Link to="/">All Categories</Link>
-              </li>
-              <li>
-                <Link to="/category/Technology">Technology</Link>
-              </li>
-              <li>
-                <Link to="/">Events</Link>
-              </li>
-              <li>
-                <Link to="/">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+    
     </div>
   )
 }

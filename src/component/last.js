@@ -1,6 +1,5 @@
 import React from "react"
-import styles from "../styles/last.module.scss"
-import hstyles from "../styles/style.module.scss"
+
 import { Link, graphql, useStaticQuery } from "gatsby"
 import '../utils/fontawesome'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -51,7 +50,10 @@ const Last = () => {
       {edge.node.excerpt}
       <Link to={`/${edge.node.slug}`} >
                 <h4 >Read More &#8594;</h4>
-                </Link>
+                </Link><FontAwesomeIcon
+                  icon={"folder-open"}
+                  style={{ color: "#e74c3c" }}
+                />{" "}
       <Link to={`/category/${edge.node.category}`}>{edge.node.category}</Link>
       </Card.Text>
     </Card.Body>
