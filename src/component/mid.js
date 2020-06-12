@@ -36,7 +36,7 @@ const Mid = () => {
       <Row>
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
- <Col md={8} key={edge.node.id}>
+ <Col md={4} key={edge.node.id}>
   <CardDeck>
   <Card>
     <Card.Img variant="top" src={edge.node.featuredImage.fluid.src} />
