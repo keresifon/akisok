@@ -119,3 +119,74 @@ h4 {
   //background: url(images/pattern.png) repeat;
 }
 }
+
+.section-title {
+  border-bottom: 2px solid #EEEEEE;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+  margin-bottom: 20px;
+  position: relative;
+
+  .sep {
+    display: block;
+    height: 2px;
+    margin-bottom: -2px;
+    width: 60px;
+  }
+}
+.main-color-bg {
+  background: #E74C3C;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  //color: $hover-color;
+  color: $dropdown-link-color;
+  text-align: inherit; // For `<button>`s
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  // Prevent dropdown overflow if there's no padding
+  // See https://github.com/twbs/bootstrap/pull/27703
+  @if $dropdown-padding-y == 0 {
+    &:first-child {
+      @include border-top-radius($dropdown-inner-border-radius);
+    }
+
+    &:last-child {
+      @include border-bottom-radius($dropdown-inner-border-radius);
+    }
+  }
+
+  @include hover-focus() {
+    color: $white;
+    background-color: $hover-color;
+    text-decoration: none;
+    @include gradient-bg($hover-color);
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    @include gradient-bg($hover-color);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}

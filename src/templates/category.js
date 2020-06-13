@@ -22,7 +22,8 @@ const {edges} = props.data.allContentfulABlogPost;
        
        <Container className="py-5">
           <Row>
-            <Col><div ><h1>{props.pageContext.category}</h1></div></Col>
+            <Col><div className="section-title"><h1>{props.pageContext.category}</h1>
+            <span className="sep main-color-bg"></span></div></Col>
             </Row>
             </Container>
    
