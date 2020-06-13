@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "../utils/fontawesome"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import SideBar from "./sidebar"
-//import Img from "gatsby-image"
+import {Helmet} from "react-helmet"
 import { Container, Row, Col } from "react-bootstrap"
 
 export const query = graphql`
@@ -37,6 +37,7 @@ const Content = props => {
   }
   return (
     <Layout>
+      <Helmet title={props.data.contentfulABlogPost.title}/>
       <Container className="mt-5">
         <Row>
           <Col md={8}>

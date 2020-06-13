@@ -27,7 +27,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-fonts-v2": "0.0.6",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-source-contentful": "^2.1.98",

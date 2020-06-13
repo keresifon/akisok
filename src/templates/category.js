@@ -1,5 +1,5 @@
 import React  from "react"
-
+import {Helmet} from "react-helmet"
 import Layout from "../component/layout"
 import { Link, graphql } from "gatsby"
 import '../utils/fontawesome'
@@ -17,6 +17,7 @@ const {edges} = props.data.allContentfulABlogPost;
   return (
     <Layout >
        <>
+       <Helmet title={props.pageContext.category}/>
      <div> 
      <div>&nbsp;</div>
        

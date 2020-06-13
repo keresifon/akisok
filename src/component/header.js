@@ -3,12 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome} from "@fortawesome/free-solid-svg-icons"
 import { SocialIcon } from "react-social-icons"
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
+import {Helmet} from "react-helmet"
 
 import  "../styles/main.scss"
 
 const Header = () => {
   return (
     <div>
+      <Helmet title="Akisok"/>
       <Navbar
         fixed="top"
         bg="light"

@@ -29,6 +29,7 @@ const SideBar = (props) => {
     `)
  const { edges } = data.allContentfulABlogPost;
  let filtered = edges.filter(edge => edge.node.category === props.data.contentfulABlogPost.category)
+ let nfiltered = edges.filter(edge => edge.node.category !== props.data.contentfulABlogPost.category)
     return (
         
           
@@ -54,6 +55,28 @@ const SideBar = (props) => {
             
             </ul>
             
+            </div>
+            <div className="widget-title"><h4>Other posts </h4></div>
+            <div className = "widget_other_entries">
+                
+            
+            <ul >
+                {
+                nfiltered.map (edge => {
+                  return (
+                    <li key={edge.node.title}>
+                      <Link  to={`${edge.node.slug}`}>
+                      <FontAwesomeIcon
+                  icon={ faCaretRight} 
+                  style={{ color: "#dddddd" }}
+                />  {edge.node.title} - <span>{edge.node.category}</span>
+                      </Link>
+                      
+                    </li>
+                  )
+                })}
+            
+            </ul>
             </div>
             </div >
                 

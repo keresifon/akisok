@@ -107,6 +107,19 @@ color:$black;
 } 
 } 
 
+.widget_other_entries {
+  ul {
+    li {
+	border-bottom: 1px solid #EDEDED;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+} 
+} 
+
 
 .widget-title {
 
