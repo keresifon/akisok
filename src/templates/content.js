@@ -41,7 +41,7 @@ const Content = props => {
         <Row>
           <Col md={8}>
             <div>&nbsp;</div>
-            {console.log(props)}
+            
             <div>
               <img
                 className="img-fluid"
