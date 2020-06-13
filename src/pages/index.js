@@ -7,7 +7,7 @@ import Last from "../component/last"
 //import Third from "../component/third"
 
 
-const HomePage = () => {
+const HomePage = (props) => {
     
   return (
     <div>

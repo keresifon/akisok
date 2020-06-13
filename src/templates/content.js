@@ -41,8 +41,10 @@ const Content = props => {
         <Row>
           <Col md={8}>
             <div>&nbsp;</div>
+            {console.log(props)}
             <div>
               <img
+                className="img-fluid"
                 src={props.data.contentfulABlogPost.featuredImage.fluid.src}
                 alt={props.data.contentfulABlogPost.featuredImage.title}
               />
@@ -71,7 +73,7 @@ const Content = props => {
           <Col>
             <div>
               <div>&nbsp;</div>
-              <SideBar />
+              <SideBar {...props}/>
             </div>
           </Col>
         </Row>

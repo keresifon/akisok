@@ -12,7 +12,7 @@ import { Container, Row, Col, Card , CardDeck} from "react-bootstrap"
 
 
 const Category = (props , {pageContext}) => {
-
+const {edges} = props.data.allContentfulABlogPost;
 
   return (
     <Layout >
@@ -28,7 +28,7 @@ const Category = (props , {pageContext}) => {
    
        <Container>
           <Row>
-    {props.data.allContentfulABlogPost.edges.map(edge => {
+    {edges.map(edge => {
       return (
         
         

@@ -7,7 +7,7 @@ import { Card, CardDeck, Container, Row, Col } from "react-bootstrap"
 
 //import Img from "gatsby-image"
 
-const Last = () => {
+const Last = (props) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulABlogPost(
@@ -37,6 +37,7 @@ const Last = () => {
   return (
     <>
       <div>&nbsp;</div>
+      {console.log("Last",props)}
       <div>
         <Container>
           <Row>
