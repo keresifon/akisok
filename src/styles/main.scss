@@ -1,10 +1,96 @@
 @import "./node_modules/bootstrap-scss/bootstrap.scss";
+//$font: "Droid Sans", Helvetica, Arial, Sans-Serif;
+//$font-header: "Raleway" , Helvetica, Arial, Sans-Serif;
+$white: #fff;
+$black: #000;
+$hover-color: #e74c3c;
 
-.navigation-clean.navbar-light ,
-.navbar-nav .nav-link.active, .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus, .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover {
-    color: rgb(14, 13, 13);
-    box-shadow: none;
-    background: none;
-    pointer-events: none;
+a {
+  color: $black;
+  text-decoration: none;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include hover() {
+    color: $hover-color;
+    text-decoration: none;
   }
+}
+
+.read-more {
+  text-decoration: none;
+ list-style: none;
+text-transform: uppercase;
+
+color:$hover-color;
+@include hover() {
+
+color:$black;
+
+
+}
+
+}
+.card-title {
+ 
+  list-style: none;
+  text-decoration: none;
+  color:$black; 
+  text-transform: uppercase;
   
+  
+
+}
+
+
+.navbar-light {
+  .navbar-brand {
+    color: $navbar-light-brand-color;
+
+    @include hover-focus() {
+      color: $hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      @include hover-focus() {
+        color: $white;
+        background-color: $hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $white;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+    a {
+      color: $navbar-light-active-color;
+
+      @include hover-focus() {
+        color: $hover-color;
+      }
+    }
+  }
+}
+

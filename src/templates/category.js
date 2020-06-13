@@ -34,7 +34,7 @@ const {edges} = props.data.allContentfulABlogPost;
         
           <Col md={4} key={edge.node.id}>
                   <CardDeck className=" h-100">
-                    <Card className=" mb-4" >
+                    <Card className=" mb-4 border-0" >
                       <Card.Img
                         variant="top"
                         src={edge.node.featuredImage.fluid.src}
@@ -42,13 +42,13 @@ const {edges} = props.data.allContentfulABlogPost;
                       <Card.Body>
                         <Card.Title>
                           <Link to={`/${edge.node.slug}`}>
-                            {edge.node.title}
+                          &#8594; {edge.node.title}
                           </Link>
                         </Card.Title>
                         <Card.Text>{edge.node.excerpt}</Card.Text>
                         
                       </Card.Body>
-                      <Card.Footer>
+                      <Card.Footer className="border-0" >
                         <small className="text-muted">{edge.node.date}</small>
                       </Card.Footer>
                     </Card>

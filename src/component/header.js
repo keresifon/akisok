@@ -1,8 +1,10 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHome} from "@fortawesome/free-solid-svg-icons"
 
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
 
-//import  "../styles/main.scss"
+import  "../styles/main.scss"
 
 const Header = () => {
   return (
@@ -27,7 +29,10 @@ const Header = () => {
               />
               <Button variant="outline-primary">Search</Button>
             </Form> */}
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/"><FontAwesomeIcon
+                  icon={faHome}
+                  //style={{ color: "#e74c3c" }}
+                />Home</Nav.Link>
             <Nav.Link href="#features">The Blog</Nav.Link>
             <NavDropdown title="All Categories" id="basic-nav-dropdown">
         <NavDropdown.Item href="/category/Technology">Technology</NavDropdown.Item>

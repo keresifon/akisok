@@ -45,7 +45,7 @@ const Last = (props) => {
               return (
                 <Col md={4} key={edge.node.id}>
                   <CardDeck className=" h-100">
-                    <Card className=" mb-4">
+                    <Card className=" mb-4 border-0">
                       <Card.Img
                         variant="top"
                         src={edge.node.featuredImage.fluid.src}
@@ -58,7 +58,7 @@ const Last = (props) => {
                         </Card.Title>
                         <Card.Text>{edge.node.excerpt}</Card.Text>
                         <Card.Text>
-                          <Link to={`/${edge.node.slug}`}>
+                          <Link to={`/${edge.node.slug}`} className = "read-more">
                             Read More &#8594;
                             <br />
                             <br />
@@ -72,7 +72,7 @@ const Last = (props) => {
                           </Link>
                         </Card.Text>
                       </Card.Body>
-                      <Card.Footer>
+                      <Card.Footer className=" border-0">
                         <small className="text-muted">{edge.node.date}</small>
                       </Card.Footer>
                     </Card>

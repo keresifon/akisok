@@ -38,7 +38,7 @@ const Mid = () => {
           return (
  <Col md={4} key={edge.node.id}>
   <CardDeck>
-  <Card>
+  <Card className="border-0">
     <Card.Img variant="top" src={edge.node.featuredImage.fluid.src} />
     <Card.Body>
       <Card.Title><Link to={`/${edge.node.slug}`}>{edge.node.title}</Link></Card.Title>
@@ -46,7 +46,7 @@ const Mid = () => {
       {edge.node.excerpt}
       </Card.Text>
       <Card.Text>
-      <Link to={`/${edge.node.slug}`} >
+      <Link to={`/${edge.node.slug}`} className = "read-more">
                 Read More &#8594;<br/><br/>
                 </Link><FontAwesomeIcon
                   icon={"folder-open"}
@@ -55,7 +55,7 @@ const Mid = () => {
       <Link to={`/category/${edge.node.category}`}>{edge.node.category}</Link>
       </Card.Text>
     </Card.Body>
-    <Card.Footer>
+    <Card.Footer className=" border-0">
       <small className="text-muted">{edge.node.date}</small>
     </Card.Footer>
   </Card>
