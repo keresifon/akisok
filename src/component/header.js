@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome} from "@fortawesome/free-solid-svg-icons"
-
+import { SocialIcon } from "react-social-icons"
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
 
 import  "../styles/main.scss"
@@ -21,6 +21,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="ml-auto ">
+          <SocialIcon url="https://twitter.com/akadook" style={{ height: 30, width: 30 }}/> &nbsp;&nbsp;
+            <SocialIcon url="https://www.facebook.com/akisvok" style={{ height: 30, width: 30 }}/> 
+            &nbsp;&nbsp;&nbsp;&nbsp;
             {/* <Form inline>
               <FormControl
                 type="text"

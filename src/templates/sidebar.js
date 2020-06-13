@@ -1,7 +1,8 @@
 import React from "react"
 import {Link, graphql , useStaticQuery} from "gatsby"
 import '../utils/fontawesome'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCaretRight} from "@fortawesome/free-solid-svg-icons"
 
 
 
@@ -32,8 +33,8 @@ const SideBar = (props) => {
         
           
            <div> 
-             <div>{ props.data.contentfulABlogPost.category}</div>
-            <div >
+             <div className="widget-title"><h4>Other content in { props.data.contentfulABlogPost.category}</h4></div>
+            <div className = "widget_recent_entries">
                 
               <ul >
                 {
@@ -41,7 +42,10 @@ const SideBar = (props) => {
                   return (
                     <li key={edge.node.title}>
                       <Link  to={`${edge.node.slug}`}>
-                      <p>{edge.node.title}</p>
+                      <FontAwesomeIcon
+                  icon={ faCaretRight} 
+                  style={{ color: "#dddddd" }}
+                />  {edge.node.title}
                       </Link>
                       
                     </li>
