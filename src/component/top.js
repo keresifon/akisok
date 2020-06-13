@@ -51,25 +51,24 @@ const Top = () => {
                     alt={edge.node.featuredImage.title}
                   />
                   <Card.ImgOverlay>
-                    <Card.Title>
+                    <Card.Title className = "history">
                     <FontAwesomeIcon
                         icon={"folder-open"}
                         style={{ color: "#ffffff" }}
                       />{" "}
-                      <Link to={`/category/${edge.node.category}`}>
+                      <Link to={`/category/${edge.node.category}`}></Link>
                         {edge.node.category}
-                      </Link>
+                      
                     </Card.Title>
                     <Card.Text>
                     
-                    <FontAwesomeIcon icon={"calendar"} />
-                      {edge.node.date}
+                  
                    
                       
                     </Card.Text>
                     <Card.Text>
                       
-                      <Link to={`/${edge.node.slug}`}>{edge.node.title}</Link>
+                      <Link to={`/${edge.node.slug}`} className="small" >{edge.node.title}</Link>
                     </Card.Text>
                   </Card.ImgOverlay>
                 </Card>

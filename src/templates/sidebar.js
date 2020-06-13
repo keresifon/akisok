@@ -69,8 +69,8 @@ const SideBar = (props) => {
                       <FontAwesomeIcon
                   icon={ faCaretRight} 
                   style={{ color: "#dddddd" }}
-                />  {edge.node.title} - <span>{edge.node.category}</span>
-                      </Link>
+                />  {edge.node.title}</Link> - <span><Link to={`/category/${edge.node.category}`}>{edge.node.category}</Link></span>
+                      
                       
                     </li>
                   )

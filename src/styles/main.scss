@@ -203,3 +203,31 @@ h4 {
     }
   }
 }
+
+
+.history {
+  //position: absolute; 
+  
+  left: 15px; 
+  width: 30%; 
+  padding: 3px;
+  color: $white;
+  background-color: $hover-color;
+  text-transform: uppercase;
+  font-size: 13px;
+  
+ 
+  }
+  .small  {
+  text-decoration: none;
+   list-style: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  color:$white;
+  @include hover() {
+  
+  color:$black;
+  
+  
+  }
+}
