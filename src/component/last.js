@@ -37,7 +37,7 @@ const Last = (props) => {
   return (
     <>
       <div>&nbsp;</div>
-      {console.log("Last",props)}
+      
       <div>
         <Container>
           <Row>

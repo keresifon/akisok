@@ -1,7 +1,7 @@
 import React  from "react"
 import {Helmet} from "react-helmet"
 import Layout from "../component/layout"
-import { Link, graphql } from "gatsby"
+import { Link, graphql} from "gatsby"
 import '../utils/fontawesome'
 import { Container, Row, Col, Card , CardDeck} from "react-bootstrap"
 
