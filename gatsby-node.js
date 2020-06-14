@@ -37,6 +37,4 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-  
 }

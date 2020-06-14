@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "env-cmd -f .env gatsby develop",
+    "develop": "env-cmd -f .env  gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -23,6 +23,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@loadable/component": "^5.12.0",
     "bootstrap": "^4.5.0",
     "bootstrap-scss": "^4.5.0",
     "env-cmd": "^10.1.0",
@@ -47,6 +48,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-leaf-carousel": "^2.0.3",
+    "react-loadable": "^5.5.0",
+    "react-multi-carousel": "^2.5.5",
     "styled-components": "^5.0.1",
     "typescript": "^3.8.3"
   },
