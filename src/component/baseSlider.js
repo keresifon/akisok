@@ -1,8 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
 import InfiniteCarousel from "react-leaf-carousel"
-//import { Carousel, Image } from 'grommet';
-//import { Image } from '@bit/grommet.grommet.image';
 import { Card } from "react-bootstrap"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
