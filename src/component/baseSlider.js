@@ -51,7 +51,7 @@ const BaseSlider = () => {
         sideSize={0.1}
         slidesToScroll={4}
         slidesToShow={4}
-        scrollOnDevice={false}
+        scrollOnDevice={true}
         autoCycle={true}
         slidesSpacing={0}
       >
