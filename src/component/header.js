@@ -4,8 +4,10 @@ import { faHome} from "@fortawesome/free-solid-svg-icons"
 import { SocialIcon } from "react-social-icons"
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
 import {Helmet} from "react-helmet"
+import { Link } from 'gatsby';
 
 import  "../styles/main.scss"
+
 
 const Header = () => {
   return (
@@ -19,7 +21,7 @@ const Header = () => {
         collapseOnSelect
         expand="lg"
       >
-        <Navbar.Brand href="/">akisok!</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">akisok!</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="ml-auto ">
@@ -34,19 +36,18 @@ const Header = () => {
               />
               <Button variant="outline-primary">Search</Button>
             </Form> */}
-            <Nav.Link href="/"><FontAwesomeIcon
+            <Nav.Link as={Link} to="/"><FontAwesomeIcon
                   icon={faHome}
                   //style={{ color: "#e74c3c" }}
                 />Home</Nav.Link>
-            <Nav.Link href="#features">The Blog</Nav.Link>
+            <Nav.Link as={Link} to="#features">The Blog</Nav.Link>
             <NavDropdown title="All Categories" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/category/Technology">Technology</NavDropdown.Item>
-        <NavDropdown.Item href="/category/Opinion">Opinion</NavDropdown.Item>
-        <NavDropdown.Item href="/category/History">History</NavDropdown.Item>
-        {/* <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
+        <NavDropdown.Item as={Link} to="/category/Technology">Technology</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/category/Opinion">Opinion</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/category/History">History</NavDropdown.Item>
+        
       </NavDropdown>
-            <Nav.Link href="#pricing">Contact</Nav.Link>
+            <Nav.Link as={Link} to="#pricing">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
