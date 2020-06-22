@@ -9,7 +9,8 @@ const Blog = props => {
     console.log(props)
   const data = useStaticQuery(graphql`
     query {
-      allContentfulABlogPost(sort: { fields: date, order: DESC }) {
+      allContentfulABlogPost(sort: { fields: date, order: DESC }, 
+        filter:{category : {nin:"History"}}) {
         edges {
           node {
             id
