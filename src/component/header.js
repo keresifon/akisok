@@ -40,7 +40,7 @@ const Header = () => {
                   icon={faHome}
                   //style={{ color: "#e74c3c" }}
                 />Home</Nav.Link>
-            <Nav.Link as={Link} to="#features">The Blog</Nav.Link>
+            <Nav.Link as={Link} to="/blog">The Blog</Nav.Link>
             <NavDropdown title="All Categories" id="basic-nav-dropdown">
         <NavDropdown.Item as={Link} to="/category/Technology">Technology</NavDropdown.Item>
         <NavDropdown.Item as={Link} to="/category/Opinion">Opinion</NavDropdown.Item>

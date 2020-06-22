@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import Layout from "../component/layout"
 import Top from "../component/top"
