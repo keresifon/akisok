@@ -30,7 +30,7 @@ const Blog = ({data, pageContext, uri}) => {
             <Row>
               {data.allContentfulABlogPost.edges.map(edge => {
                 return (
-                  <Col md={5} key={edge.node.id}>
+                  <Col md={4} key={edge.node.id}>
                     <CardDeck className=" h-100">
                       <Card className=" mb-4 border-0">
                         <Card.Img
