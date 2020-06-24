@@ -57,8 +57,8 @@ const BaseSlider = () => {
       >
         {data.allContentfulABlogPost.edges.map(edge => {
           return (
-            <div>
-              <Card className=" text-black my-2 border-0" key={edge.node.id}>
+            <div key={edge.node.id}>
+              <Card className=" text-black my-2 border-0" >
                 <Card.Img
                   src={edge.node.featuredImage.fluid.src}
                   alt={edge.node.featuredImage.title}
