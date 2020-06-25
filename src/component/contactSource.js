@@ -12,7 +12,8 @@ const ContactSource = (props) => {
        
             <Container>
          
-<Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+<Form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+<input type="hidden" name="bot-field" />
 <input type="hidden" name="form-name" value="contact" />
 <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
