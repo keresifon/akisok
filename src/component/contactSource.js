@@ -17,20 +17,20 @@ const ContactSource = (props) => {
 <input type="hidden" name="form-name" value="contact" />
 <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
-    <Form.Control type="text" placeholder="yourname" />
+    <Form.Control type="text" placeholder="yourname" name = "name" id = "name"/>
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@example.com" />
+    <Form.Control type="email" placeholder="name@example.com" name = "email" id = "email" />
   </Form.Group>
   
   <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Subject</Form.Label>
-    <Form.Control type="text" placeholder="email subject" />
+    <Form.Control type="text" placeholder="email subject" name = "subject" id = "subject"/>
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlTextarea1">
     <Form.Label>Your Message</Form.Label>
-    <Form.Control as="textarea" rows="3" />
+    <Form.Control as="textarea" rows="3" name = "message" id = "message"/>
   </Form.Group>
   <Button variant="primary" type="submit">
     Send
