@@ -2,7 +2,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHome} from "@fortawesome/free-solid-svg-icons"
 import { SocialIcon } from "react-social-icons"
-import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from "react-bootstrap"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import {Helmet} from "react-helmet"
 import { Link } from 'gatsby';
 

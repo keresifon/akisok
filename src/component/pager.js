@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col, Card , CardDeck} from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 const Pager = ({ pageContext }) => {
   const { previousPagePath, nextPagePath } = pageContext

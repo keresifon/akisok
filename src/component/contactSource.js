@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button, Col, Container , Row} from "react-bootstrap"
-import Layout from '../component/layout';
-import {Helmet} from "react-helmet"
+import {  Form,  Button, Container } from "react-bootstrap"
+//import Layout from '../component/layout';
+//import {Helmet} from "react-helmet"
 
 const ContactSource = (props) => {
 
