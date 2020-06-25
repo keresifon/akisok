@@ -5,13 +5,13 @@ import Layout from "../component/layout"
 import { Container, Row, Col, Card , CardDeck} from "react-bootstrap"
 import Pager from "../component/pager"
 
-const Blog = ({data, pageContext, uri}) => {
+const Blog = (props) => {
 
-   
+console.log(props)   
     return (
         <Layout >
         <>
-        
+        <Helmet title="Blog"/>
          <div> 
          <div>&nbsp;</div>
          
@@ -28,7 +28,7 @@ const Blog = ({data, pageContext, uri}) => {
     
           <Container>
             <Row>
-              {data.allContentfulABlogPost.edges.map(edge => {
+              {props.data.allContentfulABlogPost.edges.map(edge => {
                 return (
                   <Col md={4} key={edge.node.id}>
                     <CardDeck className=" h-100">
@@ -56,7 +56,7 @@ const Blog = ({data, pageContext, uri}) => {
             </Row>
           </Container>
           </div>
-         <Pager pageContext={pageContext} />
+         <Pager pageContext={props.pageContext} />
         </>
         </Layout>
     );
