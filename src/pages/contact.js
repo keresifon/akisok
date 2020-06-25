@@ -9,11 +9,7 @@ const Contact = (props) => {
 const removeLeadingSlash = require('remove-leading-slash');
   const url = removeLeadingSlash(props.uri);
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    
-  }
-
+  
     return (
         <div>
         <Layout>
@@ -30,7 +26,8 @@ const removeLeadingSlash = require('remove-leading-slash');
           </Container>
             <Container>
          
-<Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+<Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+<input type="hidden" name="bot-field" />
 <input type="hidden" name="form-name" value="contact" />
 <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
