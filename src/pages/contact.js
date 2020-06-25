@@ -8,6 +8,12 @@ import {Helmet} from "react-helmet"
 const Contact = (props) => {
 const removeLeadingSlash = require('remove-leading-slash');
   const url = removeLeadingSlash(props.uri);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+  }
+
     return (
         <div>
         <Layout>
@@ -23,40 +29,8 @@ const removeLeadingSlash = require('remove-leading-slash');
             </Row>
           </Container>
             <Container>
-         {/* <Form>
-         <Form.Group controlId="formBasicEmail">
-    <Form.Label>Your Name</Form.Label>
-    <Form.Control type="text" placeholder="Enter name" />
-    <Form.Text className="text-muted">
-      Please input your name
-    </Form.Text>
-  </Form.Group>           
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Your Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Subject</Form.Label>
-    <Form.Control type="text" placeholder="Enter subject" />
-    <Form.Text className="text-muted">
-      
-    </Form.Text>
-  </Form.Group> 
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Subject</Form.Label>
-    <Form.Control type="textarea" placeholder="Enter subject" />
-    <Form.Text className="text-muted">
-      
-    </Form.Text>
-  </Form.Group> 
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>    */}
-<Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+         
+<Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
 <input type="hidden" name="form-name" value="contact" />
 <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
