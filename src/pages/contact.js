@@ -16,12 +16,15 @@ const removeLeadingSlash = require('remove-leading-slash');
             <div className="section-title">
             <h1>{url}</h1>
               <span className="sep main-color-bg"></span>
+              
             </div>
+            <div><stron>Thank you for your interest in our services. 
+    To find out more about how we can help your organization, please send us a message.</stron>
+    </div>
           </Col>
         </Row>
       </Container>
       <ContactSource />
-     
       </Layout>
       )
 }
