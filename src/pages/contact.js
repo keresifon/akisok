@@ -57,7 +57,7 @@ const removeLeadingSlash = require('remove-leading-slash');
   </Button>
 </Form>    */}
 <Form name="akisokcontact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-<input type="hidden" name="akisokcontact" value="akisokcontact" />
+<input type="hidden" name="form-name" value="contact" />
 <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Your Name</Form.Label>
     <Form.Control type="text" placeholder="yourname" />
