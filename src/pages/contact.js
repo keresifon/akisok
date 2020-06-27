@@ -10,6 +10,7 @@ const removeLeadingSlash = require('remove-leading-slash');
   return (
     <Layout>
     <Helmet title={url}/>
+    <div>&nbsp;</div>
     <Container className="py-5">
         <Row>
           <Col>

@@ -33,9 +33,7 @@ a {
   text-transform: uppercase;
 }
 
-.navbar {
- // padding: 0px;
-}
+
 
 .navbar-light {
   .navbar-brand {
@@ -135,6 +133,7 @@ a {
   border-bottom-color: rgb(238, 238, 238);
   margin-bottom: 20px;
   position: relative;
+  text-transform: capitalize;
 
   .sep {
     display: block;
