@@ -33,10 +33,16 @@ a {
   text-transform: uppercase;
 }
 
+.navbar {
+ // padding: 0px;
+}
+
 .navbar-light {
   .navbar-brand {
     color: $navbar-light-brand-color;
-
+   // font-size: 30px;
+    font-weight: bolder;
+    
     @include hover-focus() {
       color: $hover-color;
     }
@@ -237,4 +243,10 @@ html,
 body {
   height: 100%;
   
+}
+
+
+.bg-akisok {
+  
+  border-bottom: 2px solid $hover-color;
 }

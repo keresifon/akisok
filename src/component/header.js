@@ -17,7 +17,7 @@ const Header = () => {
         fixed="top"
         bg="light"
         variant="light"
-        className="navbar navbar-light navbar-expand-md shadow navigation-clean "
+        className="navbar navbar-light navbar-expand-md  navigation-clean bg-akisok "
         collapseOnSelect
         expand="lg"
       >
