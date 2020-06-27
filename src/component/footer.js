@@ -6,7 +6,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 const Footer = () => {
     return (
 
-     <Navbar bg="dark" variant="dark" className=" h-100" >
+     <Navbar bg="dark" variant="dark"  fixed = "bottom" >
     <Nav className="mr-auto">
     <Nav.Link>Copyright 2020 Akisok.com</Nav.Link>
     </Nav>
