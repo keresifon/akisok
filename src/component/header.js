@@ -36,18 +36,18 @@ const Header = () => {
               />
               <Button variant="outline-primary">Search</Button>
             </Form> */}
-            <Nav.Link as={Link} to="/"><FontAwesomeIcon
+            <Nav.Link as={Link} to="/" activeClassName="active" ><FontAwesomeIcon
                   icon={faHome}
                   //style={{ color: "#e74c3c" }}
                 />Home</Nav.Link>
-            <Nav.Link as={Link} to="/blog">The Blog</Nav.Link>
-            <NavDropdown title="All Categories" id="basic-nav-dropdown">
-        <NavDropdown.Item as={Link} to="/category/Technology">Technology</NavDropdown.Item>
-        <NavDropdown.Item as={Link} to="/category/Opinion">Opinion</NavDropdown.Item>
-        <NavDropdown.Item as={Link} to="/category/History">History</NavDropdown.Item>
+            <Nav.Link as={Link} to="/blog" activeClassName="active">The Blog</Nav.Link>
+            <NavDropdown title="All Categories" id="basic-nav-dropdown" >
+        <NavDropdown.Item as={Link} to="/category/Technology" activeClassName="active">Technology</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/category/Opinion" activeClassName="active">Opinion</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/category/History" activeClassName="active">History</NavDropdown.Item>
         
       </NavDropdown>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/contact" activeClassName="active">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

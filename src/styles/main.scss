@@ -65,6 +65,7 @@ a {
     .nav-link.show,
     .nav-link.active {
       color: $white;
+      background-color: $hover-color;
     }
   }
 
