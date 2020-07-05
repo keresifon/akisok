@@ -1,0 +1,121 @@
+$font: "Droid Sans", Helvetica, Arial, Sans-Serif;
+$font-header: "Raleway" , Helvetica, Arial, Sans-Serif;
+
+//Color
+
+$white: #fff;
+$black: #000;
+$hover-color: #e74c3c;
+
+html,
+body {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  //margin: 0 0;
+  padding-right: 0px;
+  min-height: 100vh;
+}
+.h1 h2 h3 h4 {
+  font-family: $font-header;
+  font-size: 22px;
+}
+.header {
+  height: 50px;
+  padding-left: 10px;
+  width: 100%;
+  border: 0px solid;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  .inner-header {
+    font-family: $font-header;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+      color: $black;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+  .navigation {
+    //float: right;
+    padding: 7px 10px;
+    margin-right: 10px;
+    margin-top: -35px;
+    nav {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+          text-decoration: none;
+          list-style: none;
+          text-transform: uppercase;
+          font-weight: 700;
+
+          a {
+            text-decoration: none;
+            color: $black;
+            padding: 7px 10px;
+
+            &:hover {
+              background-color: $hover-color;
+              color: $white;
+              padding: 7px 10px;
+            }
+            &:active {
+              background-color: $hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section {
+  font-family: $font-header;
+  color: $black;
+  text-decoration: none;
+
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.footer {
+  margin-left: 0px;
+  background: $black;
+  color: $white;
+  width: 100%;
+  padding: 10px;
+}
+
+.sidebar {
+ul {
+  li {
+    border-bottom: 1px solid #EDEDED;
+    padding-bottom: 10px;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+
+     a {
+      
+      text-decoration: none;
+     }
+}
+}
+}

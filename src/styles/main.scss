@@ -1,0 +1,252 @@
+@import "./node_modules/bootstrap-scss/bootstrap.scss";
+//$font: "Droid Sans", Helvetica, Arial, Sans-Serif;
+//$font-header: "Raleway" , Helvetica, Arial, Sans-Serif;
+$white: #fff;
+$black: #000;
+$hover-color: #e74c3c;
+
+a {
+  color: $black;
+  text-decoration: none;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include hover() {
+    color: $hover-color;
+    text-decoration: none;
+  }
+}
+
+.read-more {
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+
+  color: $hover-color;
+  @include hover() {
+    color: $black;
+  }
+}
+.card-title {
+  list-style: none;
+  text-decoration: none;
+  color: $black;
+  text-transform: uppercase;
+}
+
+
+
+.navbar-light {
+  .navbar-brand {
+    color: $navbar-light-brand-color;
+   // font-size: 30px;
+    font-weight: bolder;
+    
+    @include hover-focus() {
+      color: $hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      @include hover-focus() {
+        color: $white;
+        background-color: $hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $white;
+      background-color: $hover-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+    a {
+      color: $navbar-light-active-color;
+
+      @include hover-focus() {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+.widget_recent_entries {
+  ul {
+    li {
+      border-bottom: 1px solid #ededed;
+      padding-bottom: 5px;
+      padding-top: 10px;
+      list-style: none;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.widget_other_entries {
+  ul {
+    li {
+      border-bottom: 1px solid #ededed;
+      padding-bottom: 5px;
+      padding-top: 10px;
+      list-style: none;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.widget-title {
+  h4 {
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 1000;
+    text-transform: capitalize;
+    background-color: grayscale($color: #f8f5f5);
+    //background: url(images/pattern.png) repeat;
+  }
+}
+
+.section-title {
+  border-bottom: 2px solid #eeeeee;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: capitalize;
+
+  .sep {
+    display: block;
+    height: 2px;
+    margin-bottom: -2px;
+    width: 60px;
+  }
+}
+.main-color-bg {
+  background: #e74c3c;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%; // For `<button>`s
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-weight: $font-weight-normal;
+  //color: $hover-color;
+  color: $dropdown-link-color;
+  text-align: inherit; // For `<button>`s
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  background-color: transparent; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  // Prevent dropdown overflow if there's no padding
+  // See https://github.com/twbs/bootstrap/pull/27703
+  @if $dropdown-padding-y == 0 {
+    &:first-child {
+      @include border-top-radius($dropdown-inner-border-radius);
+    }
+
+    &:last-child {
+      @include border-bottom-radius($dropdown-inner-border-radius);
+    }
+  }
+
+  @include hover-focus() {
+    color: $white;
+    background-color: $hover-color;
+    text-decoration: none;
+    @include gradient-bg($hover-color);
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    @include gradient-bg($hover-color);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+.history {
+  //position: absolute;
+
+  left: 15px;
+  width: 30%;
+  padding: 3px;
+  color: $white;
+  background-color: $hover-color;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.small {
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: $white;
+  @include hover() {
+    color: $black;
+  }
+}
+
+.pagination {
+  .page-item {
+    .page-link {
+      color: $hover-color;
+    }
+  }
+}
+.btn-primary {
+  color: #fff;
+  background-color: $hover-color;
+  border-color: $hover-color;
+}
+
+.fpage {
+
+max-height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  
+}
+
+
+.bg-akisok {
+  
+  border-bottom: 2px solid $hover-color;
+}

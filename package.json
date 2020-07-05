@@ -1,0 +1,71 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "engines": {
+    "node": ">=12.16.3",
+    "npm": ">=6.14.5"
+  },
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "env-cmd -f .env  gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@loadable/component": "^5.12.0",
+    "bootstrap": "^4.5.0",
+    "bootstrap-scss": "^4.5.0",
+    "env-cmd": "^10.1.0",
+    "gatsby": "^2.21.21",
+    "gatsby-awesome-pagination": "^0.3.6",
+    "gatsby-image": "^2.2.44",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-fonts-v2": "0.0.6",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-sass": "^2.1.30",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-source-contentful": "^2.1.98",
+    "gatsby-source-filesystem": "^2.1.50",
+    "gatsby-transformer-remark": "^2.6.59",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "grommet": "^2.11.2",
+    "node-sass": "^4.14.1",
+    "nuka-carousel": "^4.6.6",
+    "react": "^16.12.0",
+    "react-awesome-slider": "^4.1.0",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-leaf-carousel": "^2.0.3",
+    "react-loadable": "^5.5.0",
+    "react-multi-carousel": "^2.5.5",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
+    "remove-leading-slash": "^1.0.1",
+    "styled-components": "^5.0.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "react-social-icons": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
