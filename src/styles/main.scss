@@ -35,60 +35,6 @@ a {
 
 
 
-.navbar-light {
-  .navbar-brand {
-    color: $navbar-light-brand-color;
-   // font-size: 30px;
-    font-weight: bolder;
-    
-    @include hover-focus() {
-      color: $hover-color;
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      color: $navbar-light-color;
-
-      @include hover-focus() {
-        color: $white;
-        background-color: $hover-color;
-      }
-
-      &.disabled {
-        color: $navbar-light-disabled-color;
-      }
-    }
-
-    .show > .nav-link,
-    .active > .nav-link,
-    .nav-link.show,
-    .nav-link.active {
-      color: $white;
-      background-color: $hover-color;
-    }
-  }
-
-  .navbar-toggler {
-    color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
-  }
-
-  .navbar-toggler-icon {
-    background-image: escape-svg($navbar-light-toggler-icon-bg);
-  }
-
-  .navbar-text {
-    color: $navbar-light-color;
-    a {
-      color: $navbar-light-active-color;
-
-      @include hover-focus() {
-        color: $hover-color;
-      }
-    }
-  }
-}
 
 .widget_recent_entries {
   ul {
